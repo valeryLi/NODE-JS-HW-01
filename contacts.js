@@ -43,7 +43,7 @@ async function removeContact(contactId) {
 
     await fs.writeFile(contactsPath, JSON.stringify(newContent));
     const upgradedContacts = await fs.readFile(contactsPath, "utf8");
-    const message = `Contact ${contactId} was been successfuly deleted`;
+    const message = `Contact ${contactId} was been successfully deleted`;
     console.log(message.info);
     console.table(JSON.parse(upgradedContacts));
     return;
